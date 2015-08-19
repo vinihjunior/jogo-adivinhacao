@@ -4,7 +4,7 @@ while True:
     print("\nDescubra qual é o animal: ")
     lista = ["cachorro", "gato", "cavalo", "elefante", "arara", "galinha"]
     end = len(lista)
-    secret = randint(0, end)
+    secret = randint(0, end - 1)
     animal = (lista[secret])
 
     print("\nQue tem", len(animal), "letras \n",
