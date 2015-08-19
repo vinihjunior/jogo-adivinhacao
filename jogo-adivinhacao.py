@@ -17,7 +17,6 @@ while True:
     secret = randint(0, end - 1)
     animal = (lista[secret])
     comp = len(animal)
-    print(animal)
     print("\n* Que tem", (comp - 1), "letras \n",
           "\n* E começa com a letra", animal[0], "\n")
     resp = input("\n* Digite sua resposta: ")
