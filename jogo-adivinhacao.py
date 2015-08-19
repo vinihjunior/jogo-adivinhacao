@@ -29,7 +29,6 @@ while True:
     print("\n* Que tem", (comp - 1), "letras \n",
           "\n* E começa com a letra", animal[0], "\n")
     resp = input("\n* Digite sua resposta: ")
-    print(resp)
     if resp == animal:                        # compara a resposta com o nome sorteado.
         print("\nVocê ACERTOU!! \o/ é", animal, "\n")
         voltar = input("Deseja jogar novamente? (y/n): ")
