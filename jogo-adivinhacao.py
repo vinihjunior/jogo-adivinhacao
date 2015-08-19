@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Um simples jogo de adinhação com dicas.
+# Um simples jogo de adivinhação com dicas.
 #
 # Vinicius Júnior
 # @VinihJunior
@@ -16,13 +16,14 @@ while True:
     print("*                                              *")
     print("************************************************")
     print("\nDescubra qual é o animal: ")
+
     lista = []                                # cria uma lista dos nomes da "lista-animais.txt" atribuidos em "line"
     lista_animais = open("lista-animais.txt") # abre o arquivo .txt
     for line in lista_animais:                # */
         line = line.lower()                   # deixa todas as letras minúsculas
-        lista.append(line)                    # agrega todos os nomes da "lista_animais" em "line" /*
-        end = len(lista)                      # conta a quantidade de nomes da "lista" e atribui a variável "end"
+        lista.append(line)                    # agrega todos os nomes de "line" em "lista = []" /*
     lista_animais.close()                     # fecha o arquivo .txt
+    end = len(lista)                          # conta a quantidade de nomes da "lista" e atribui a variável "end"
     secret = randint(0, end - 1)              # faz o sorteio de um número de 0 á o valor atribuído em "end"
     animal = (lista[secret])                  # sorteia o nome do animal da lista
     comp = len(animal)
