@@ -1,6 +1,20 @@
+#!/usr/bin/env python
+#
+# Um simples jogo de adivinhação com dicas.
+#
+# Vinicius Júnior
+# @VinihJunior
+# vinicius.dphelippe@gmail.com
+
+
 from random import randint
 
 while True:
+    print("************************************************")
+    print("*                                              *")
+    print("*        Adivinhe qual é o ANIMAL \o/          *")
+    print("*                                              *")
+    print("************************************************")
     print("\nDescubra qual é o animal: ")
     lista = ["cachorro", "gato", "cavalo", "elefante", "arara", "galinha"]
     end = len(lista)
@@ -12,7 +26,10 @@ while True:
     resp = input("\nDigite sua resposta: ")
     if resp == animal:
         print("Você ACERTOU!!, é", animal, "\n")
-        break
+        voltar = input("Deseja jogar novamente? (y/n): ")
+        if voltar not in ("y" or "Y"):
+            break
+
     else:
         print("\nVocê errou :(\n")
         voltar = input("Deseja voltar? (y/n): ")
