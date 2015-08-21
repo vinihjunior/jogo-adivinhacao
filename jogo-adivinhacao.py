@@ -17,16 +17,20 @@ while True:
     print("************************************************")
     print("\nDescubra qual é o animal: ")
 
-    lista = []                                # cria uma lista dos nomes da "lista-animais.txt" atribuidos em "line"
-    lista_animais = open("lista-animais.txt") # abre o arquivo .txt
-    for line in lista_animais:                # */
-        line = line.lower()                   # deixa todas as letras minúsculas
-        lista.append(line)                    # agrega todos os nomes de "line" em "lista = []" /*
-    lista_animais.close()                     # fecha o arquivo .txt
-    end = len(lista)                          # conta a quantidade de nomes da "lista" e atribui a variável "end"
-    secret = randint(0, end - 1)              # faz o sorteio de um número de 0 á o valor atribuído em "end"
-    animal = (lista[secret])                  # sorteia o nome do animal da lista
+    lista_principal = []
+    lista_animais = open("lista-animais.txt")
+    lista = (lista_animais.read() )
+    lista = lista.split()
+    for line in lista:
+        line = line.lower()
+        lista_principal.append(line)
+    lista_animais.close()
+    end = len(lista_principal)
+    secret = randint(0, end - 1)
+    animal = (lista_principal[secret])
     comp = len(animal)
+    print(animal)
+
     print("\n* Que tem", (comp - 1), "letras \n",
           "\n* E começa com a letra", animal[0], "\n")
     resp = input("\n* Digite sua resposta: ")
